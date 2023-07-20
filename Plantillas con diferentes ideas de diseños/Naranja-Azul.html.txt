@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sitio de Aprendizaje de Programación</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 class="site-title">CodeLearn</h1>
+    <p class="site-tagline">Aprende a programar de manera interactiva y divertida</p>
+  </header>
+  <section class="hero-section">
+    <div class="hero-content">
+      <h2>¡Bienvenido a CodeLearn!</h2>
+      <p>Descubre el apasionante mundo de la programación y desarrolla habilidades en diversos lenguajes y tecnologías.</p>
+      <a href="registro.html" class="cta-button">Comienza tu viaje</a>
+    </div>
+    <img src="Imagenes/Hero.jpg" alt="Imagen de la sección destacada">
+  </section>
+  <section class="description-section">
+    <div class="container">
+      <h2>¿Qué es CodeLearn?</h2>
+      <p>CodeLearn es un sitio web dedicado a brindar a las personas la oportunidad de aprender programación de una manera didáctica y accesible. Nuestro objetivo es facilitar el proceso de aprendizaje al proporcionar recursos, tutoriales y características especiales que hacen que el aprendizaje sea interactivo y divertido.</p>
+      <p>En CodeLearn, puedes encontrar cursos y materiales de aprendizaje en las siguientes categorías y lenguajes de programación:</p>
+      <ul class="categories-list">
+        <li><img src="html-icon.png" alt="Icono de HTML"> HTML</li>
+        <li><img src="css-icon.png" alt="Icono de CSS"> CSS</li>
+        <li><img src="javascript-icon.png" alt="Icono de JavaScript"> JavaScript</li>
+        <li><img src="python-icon.png" alt="Icono de Python"> Python</li>
+        <li><img src="java-icon.png" alt="Icono de Java"> Java</li>
+        <li><img src="cplusplus-icon.png" alt="Icono de C++"> C++</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="testimonials-section">
+    <div class="container">
+      <h2>Testimonios de nuestros usuarios</h2>
+      <div class="testimonial">
+        <img src="user1.jpg" alt="Foto del usuario">
+        <p>"CodeLearn me ha ayudado a dar mis primeros pasos en la programación. Los cursos son claros y fáciles de seguir. ¡Lo recomiendo totalmente!"</p>
+        <p class="user-name">Juan Pérez</p>
+      </div>
+      <div class="testimonial">
+        <img src="user2.jpg" alt="Foto del usuario">
+        <p>"Gracias a CodeLearn, he podido mejorar mis habilidades en JavaScript. Los ejercicios prácticos y los proyectos han sido muy útiles para poner en práctica lo aprendido. ¡Excelente plataforma!"</p>
+        <p class="user-name">María Gómez</p>
+      </div>
+    </div>
+  </section>
+  <section class="cta-section">
+    <div class="container">
+      <h2>Comienza a aprender hoy mismo</h2>
+      <p>Regístrate ahora y accede a nuestra amplia gama de recursos de aprendizaje en programación.</p>
+      <a href="Registro.html" class="cta-button">Regístrate</a>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

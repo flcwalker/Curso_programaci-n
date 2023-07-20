@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lección 3: Estructuras de Datos y POO</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Lección 3: Estructuras de Datos y Programación Orientada a Objetos (POO)</h1>
+
+    <div class="section">
+      <h2>Listas: Índices, Operaciones y Métodos</h2>
+      <p>Una lista en Python es una colección ordenada y modificable de elementos. Cada elemento tiene un índice que indica su posición en la lista.</p>
+      <p>Podemos acceder a los elementos de una lista utilizando los índices:</p>
+      <pre><code>lista = ["manzana", "banana", "cereza"]
+print(lista[0])  # "manzana"</code></pre>
+      <p>Las listas también admiten varias operaciones y métodos útiles, como agregar elementos, eliminar elementos, obtener la longitud de la lista, entre otros.</p>
+    </div>
+
+    <div class="section">
+      <h2>Tuplas: Características y Uso</h2>
+      <p>Una tupla en Python es similar a una lista, pero es inmutable, lo que significa que no se puede modificar una vez creada. Las tuplas se representan entre paréntesis o sin ningún tipo de delimitador.</p>
+      <p>Se utilizan principalmente cuando queremos almacenar un conjunto de valores que no deben cambiar, como las coordenadas de un punto en un plano.</p>
+      <pre><code>punto = (2, 3)
+print(punto[0])  # 2</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>Conjuntos: Operaciones y Métodos</h2>
+      <p>Un conjunto en Python es una colección desordenada de elementos únicos. Se utiliza cuando queremos almacenar elementos sin ningún orden en particular y asegurarnos de que no haya duplicados.</p>
+      <p>Los conjuntos admiten operaciones como unión, intersección, diferencia, entre otros, que nos permiten realizar operaciones de conjunto comunes.</p>
+      <pre><code>conjunto1 = {1, 2, 3}
+conjunto2 = {3, 4, 5}
+
+union = conjunto1.union(conjunto2)
+print(union)  # {1, 2, 3, 4, 5}</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>Diccionarios: Claves, Valores y Métodos</h2>
+      <p>Un diccionario en Python es una colección de pares clave-valor. Cada elemento en un diccionario está asociado con una clave única que se utiliza para acceder al valor correspondiente.</p>
+      <p>Podemos acceder a los valores de un diccionario utilizando las claves:</p>
+      <pre><code>diccionario = {"nombre": "Juan", "edad": 25}
+print(diccionario["nombre"])  # "Juan"</code></pre>
+      <p>Los diccionarios también tienen métodos útiles, como agregar elementos, eliminar elementos, obtener todas las claves o valores, entre otros.</p>
+    </div>
+
+    <div class="section">
+      <h2>Programación Orientada a Objetos (POO)</h2>
+      <p>La Programación Orientada a Objetos (POO) es un paradigma de programación que se basa en la creación y manipulación de objetos. Los objetos son entidades que encapsulan datos y comportamiento relacionados.</p>
+      <p>En POO, definimos clases para crear objetos. Una clase es como un plano o plantilla que define las propiedades y métodos que tendrán los objetos creados a partir de ella.</p>
+      <pre><code>class Persona:
+  def __init__(self, nombre, edad):
+    self.nombre = nombre
+    self.edad = edad
+
+  def saludar(self):
+    print("Hola, mi nombre es", self.nombre)
+
+persona1 = Persona("Juan", 25)
+persona1.saludar()  # "Hola, mi nombre es Juan"</code></pre>
+      <p>En el ejemplo anterior, hemos creado una clase llamada "Persona" que tiene las propiedades "nombre" y "edad", así como el método "saludar". Luego, creamos un objeto de la clase "Persona" y llamamos al método "saludar".</p>
+    </div>
+  </div>
+</body>
+</html>

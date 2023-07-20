@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lección 4: Clases, Herencia y Manejo de Archivos</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Lección 4: Clases, Atributos, Herencia y Manejo de Archivos</h1>
+
+    <div class="section">
+      <h2>Clases y Objetos</h2>
+      <p>En Python, las clases son estructuras que nos permiten crear objetos que tienen propiedades (atributos) y comportamientos (métodos) asociados. Los objetos son instancias de una clase específica.</p>
+      <pre><code>class Perro:
+  def __init__(self, nombre, edad):
+    self.nombre = nombre
+    self.edad = edad
+
+  def ladrar(self):
+    print("¡Woof woof!")
+
+perro1 = Perro("Fido", 3)
+perro1.ladrar()  # "¡Woof woof!"</code></pre>
+      <p>En el ejemplo anterior, hemos creado una clase llamada "Perro" que tiene los atributos "nombre" y "edad", así como el método "ladrar". Luego, creamos un objeto de la clase "Perro" y llamamos al método "ladrar".</p>
+    </div>
+
+    <div class="section">
+      <h2>Atributos y Métodos</h2>
+      <p>Los atributos son variables asociadas a una clase u objeto, y los métodos son funciones definidas en una clase que pueden acceder y manipular los atributos.</p>
+      <p>Podemos acceder a los atributos y llamar a los métodos de un objeto utilizando la notación de punto:</p>
+      <pre><code>class Circulo:
+  def __init__(self, radio):
+    self.radio = radio
+
+  def calcular_area(self):
+    return 3.14159 * self.radio**2
+
+circulo1 = Circulo(5)
+print(circulo1.radio)  # 5
+print(circulo1.calcular_area())  # 78.53975</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>Herencia y Polimorfismo</h2>
+      <p>La herencia es un mecanismo en el que una clase puede heredar atributos y métodos de otra clase. La clase que hereda se llama clase hija o subclase, y la clase de la que se hereda se llama clase padre o superclase.</p>
+      <p>El polimorfismo permite utilizar objetos de diferentes clases de manera intercambiable, siempre que implementen los mismos métodos. Esto nos brinda flexibilidad y reutilización de código.</p>
+      <pre><code>class Animal:
+  def hacer_sonido(self):
+    pass
+
+class Perro(Animal):
+  def hacer_sonido(self):
+    print("¡Woof woof!")
+
+class Gato(Animal):
+  def hacer_sonido(self):
+    print("¡Miau!")
+
+def hacer_sonidos(animales):
+  for animal in animales:
+    animal.hacer_sonido()
+
+perro = Perro()
+gato = Gato()
+hacer_sonidos([perro, gato])  # "¡Woof woof!" "¡Miau!"</code></pre>
+      <p>En el ejemplo anterior, tenemos una clase base "Animal" con el método "hacer_sonido". Las clases "Perro" y "Gato" heredan de "Animal" y proporcionan su propia implementación del método "hacer_sonido". Luego, utilizamos el polimorfismo para hacer que una lista de animales haga sus sonidos.</p>
+    </div>
+
+    <div class="section">
+      <h2>Manejo de Archivos</h2>
+      <p>Python proporciona funciones y métodos para manejar archivos de forma sencilla. Podemos abrir archivos, leer su contenido, escribir en ellos y cerrarlos.</p>
+      <pre><code># Abrir un archivo en modo escritura
+archivo = open("datos.txt", "w")
+
+# Escribir en el archivo
+archivo.write("Hola, mundo!")
+
+# Cerrar el archivo
+archivo.close()
+
+# Abrir un archivo en modo lectura
+archivo = open("datos.txt", "r")
+
+# Leer el contenido del archivo
+contenido = archivo.read()
+print(contenido)  # "Hola, mundo!"
+
+# Cerrar el archivo
+archivo.close()</code></pre>
+      <p>En el ejemplo anterior, hemos creado un archivo llamado "datos.txt" en modo escritura y escribimos el texto "Hola, mundo!" en él. Luego, abrimos el archivo en modo lectura, leemos su contenido y lo imprimimos en la consola.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lección 4: Lectura y Escritura de Archivos, CSV y JSON, y Manejo de Errores</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Lección 4: Lectura y Escritura de Archivos, CSV y JSON, y Manejo de Errores</h1>
+
+    <div class="section">
+      <h2>Lectura y Escritura de Archivos de Texto</h2>
+      <p>Python proporciona funciones para leer y escribir archivos de texto.</p>
+      <pre><code># Abrir un archivo en modo escritura
+archivo = open("archivo.txt", "w")
+
+# Escribir en el archivo
+archivo.write("Hola, mundo!")
+
+# Cerrar el archivo
+archivo.close()
+
+# Abrir un archivo en modo lectura
+archivo = open("archivo.txt", "r")
+
+# Leer el contenido del archivo
+contenido = archivo.read()
+print(contenido)  # "Hola, mundo!"
+
+# Cerrar el archivo
+archivo.close()</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>Manipulación de Archivos CSV y JSON</h2>
+      <p>Python ofrece módulos integrados para trabajar con archivos CSV y JSON.</p>
+      <h3>Archivos CSV</h3>
+      <p>El módulo `csv` proporciona funciones para leer y escribir archivos CSV.</p>
+      <pre><code>import csv
+
+# Leer un archivo CSV
+with open("datos.csv", "r") as archivo_csv:
+    lector = csv.reader(archivo_csv)
+    for fila in lector:
+        print(fila)
+
+# Escribir en un archivo CSV
+with open("datos.csv", "w") as archivo_csv:
+    escritor = csv.writer(archivo_csv)
+    escritor.writerow(["Nombre", "Edad"])
+    escritor.writerow(["Juan", 25])
+    escritor.writerow(["María", 30])</code></pre>
+      <h3>Archivos JSON</h3>
+      <p>El módulo `json` proporciona funciones para leer y escribir archivos JSON.</p>
+      <pre><code>import json
+
+# Leer un archivo JSON
+with open("datos.json", "r") as archivo_json:
+    datos = json.load(archivo_json)
+    print(datos)
+
+# Escribir en un archivo JSON
+datos = {"nombre": "Juan", "edad": 25}
+with open("datos.json", "w") as archivo_json:
+    json.dump(datos, archivo_json)</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>Excepciones y Manejo de Errores</h2>
+      <p>En Python, podemos manejar errores y excepciones utilizando bloques `try-except`.</p>
+      <pre><code>try:
+    # Código que puede generar un error
+    resultado = 10 / 0
+except ZeroDivisionError:
+    # Manejo del error
+    print("Error: división por cero")</code></pre>
+      <p>En el ejemplo anterior, intentamos dividir 10 entre cero, lo cual generará un error de división por cero. Utilizamos el bloque `try-except` para capturar el error y mostrar un mensaje personalizado.</p>
+    </div>
+  </div>
+</body>
+</html>
